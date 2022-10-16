@@ -1,17 +1,19 @@
-import {faker} from "@faker-js/faker";
-import user from '../fixtures/user.json'
-
-describe('lesson 15-16', () => {
+import user from '../fixtures/user.json';
+import authorizationPage from "../support/pages/AuthorizationPage";
+import accountPage from "../support/pages/AccountPage";
 
     it('Authorization', () => {
-        cy.visit('/index.php?rt=account/login');
+        authorizationPage.visit();
 
-        cy.get('#loginFrm_loginname').type(user.userName);
-        cy.get('#loginFrm_password').type(user.password);
+        authorizationPage.submitLoginForm(user.userName, user.password);
 
-        cy.get('button[title="Login"]').click();
-        cy.get('h1.heading1').should('contain', ' My Account');
+        accountPage.getUserNameFromHeading();
 
         cy.getCookie('AC_SF_8CEFDA09D5').should('exist');
     })
+
+it('Test Inheritance', () => {
+    authorizationPage.visit();
+
+    authorizationPage.performSearch('i');
 })
