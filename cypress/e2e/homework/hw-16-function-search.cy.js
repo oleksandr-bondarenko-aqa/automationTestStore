@@ -1,5 +1,5 @@
-import {getProductByName, productName} from "../support/helper";
-import user from "../fixtures/user.json";
+import {getProductByName, productName} from "../../support/helper";
+import user from "../../fixtures/user.json";
 
 it (`Place order with product name: ${productName}`, () => {
     cy.setCookie("AC_SF_8CEFDA09D5", user.AC_SF_8CEFDA09D5);

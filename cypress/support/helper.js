@@ -1,5 +1,3 @@
-import user from "../fixtures/user.json";
-
 export function searchExistingProduct(productName) {
     cy.get('#filter_keyword')
         .type(productName)

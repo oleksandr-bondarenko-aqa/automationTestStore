@@ -1,37 +1,35 @@
 import user from '../fixtures/user.json'
 import {getProductByName, productName, searchExistingProduct} from "../support/helper";
+import productPage from "../support/pages/ProductPage";
+import authorizationPage from "../support/pages/AuthorizationPage";
 
-describe('lesson 15-16', () => {
+it('Place Order', () => {
+    authorizationPage.visit();
+    authorizationPage.submitLoginForm(user.userName, user.password);
 
-    it.skip('Place Order', () => {
-        cy.setCookie("AC_SF_8CEFDA09D5", user.AC_SF_8CEFDA09D5);
+    productPage.visit();
 
-        cy.visit('/index.php?rt=product/product&product_id=52');
+    productPage.getProductQuantity().clear().type('4');
+    productPage.getAddToCartButton().click();
+    productPage.getCheckoutButton().click();
+    productPage.getConfirmOrderButton().click();
 
-        cy.get('#product_quantity').clear().type('4');
-        cy.get('.productpagecart').click();
-        cy.get('#cart_checkout1').click();
-        cy.get('#checkout_btn').click();
-        cy.get('h1.heading1').should('contain', ' Your Order Has Been Processed!');
-        cy.get('.contentpanel')
-            .should('contain', 'Your order')
-            .and('contain', 'Thank you for shopping with us!')
-    })
+    productPage.validatePurchase();
+
 })
 
-    it.skip('Place Order from search', () => {
-         cy.setCookie("AC_SF_8CEFDA09D5", user.AC_SF_8CEFDA09D5);
+it('Place Order from search', () => {
+    authorizationPage.visit();
+    authorizationPage.submitLoginForm(user.userName, user.password);
 
-         cy.visit('/');
+    productPage.visitHomePage();
 
     searchExistingProduct('Benefit Bella Bamba');
 
-    cy.get('#product_quantity').clear().type('4');
-    cy.get('.productpagecart').click();
-    cy.get('#cart_checkout1').click();
-    cy.get('#checkout_btn').click();
-    cy.get('h1.heading1').should('contain', ' Your Order Has Been Processed!');
-    cy.get('.contentpanel')
-        .should('contain', 'Your order')
-        .and('contain', 'Thank you for shopping with us!')
+    productPage.getProductQuantity().clear().type('4');
+    productPage.getAddToCartButton().click();
+    productPage.getCheckoutButton().click();
+    productPage.getConfirmOrderButton().click();
+
+    productPage.validatePurchase();
 })
