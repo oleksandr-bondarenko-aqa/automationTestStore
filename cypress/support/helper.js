@@ -1,4 +1,6 @@
-export function searchExistingProduct(productName){
+import user from "../fixtures/user.json";
+
+export function searchExistingProduct(productName) {
     cy.get('#filter_keyword')
         .type(productName)
         .closest('form')
@@ -6,4 +8,16 @@ export function searchExistingProduct(productName){
 
     cy.get('h1.productname').should('contain', productName);
 
+}
+
+export function getProductByName(productName) {
+
+    cy.get('body').then((body) => {
+        if (body.find(`[title="${productName}"]`).length) {
+            cy.get(`[title="${productName}"]`).click();
+        } else {
+            cy.get('.pagination a').contains('>').click();
+            getProductByName(productName);
+        }
+    })
 }
