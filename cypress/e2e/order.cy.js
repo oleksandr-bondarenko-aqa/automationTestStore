@@ -1,9 +1,9 @@
 import user from '../fixtures/user.json'
-import {searchExistingProduct} from "../support/helper";
+import {getProductByName, productName, searchExistingProduct} from "../support/helper";
 
 describe('lesson 15-16', () => {
 
-    it('Place Order', () => {
+    it.skip('Place Order', () => {
         cy.setCookie("AC_SF_8CEFDA09D5", user.AC_SF_8CEFDA09D5);
 
         cy.visit('/index.php?rt=product/product&product_id=52');
@@ -19,10 +19,10 @@ describe('lesson 15-16', () => {
     })
 })
 
-it('Place Order from search', () => {
-    cy.setCookie("AC_SF_8CEFDA09D5", user.AC_SF_8CEFDA09D5);
+    it.skip('Place Order from search', () => {
+         cy.setCookie("AC_SF_8CEFDA09D5", user.AC_SF_8CEFDA09D5);
 
-    cy.visit('/');
+         cy.visit('/');
 
     searchExistingProduct('Benefit Bella Bamba');
 
