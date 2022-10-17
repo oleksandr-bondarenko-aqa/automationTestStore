@@ -19,24 +19,14 @@ class AuthorizationPage extends BasePage {
         return cy.get('button[title="Login"]').click();
     }
 
-    typeValidCredentialInLoginField(userName) {
+    typeCredentialInLoginField(userName) {
         cy.log(`Type username ${userName} in login field`);
         this.getLoginField().type(userName);
     }
 
-    typeInvalidCredentialInLoginField(text) {
-        cy.log(`Type gibberish in login field`);
-        this.getLoginField().type(text);
-    }
-
-    typeValidCredentialInPasswordField(password) {
+    typeCredentialInPasswordField(password) {
         cy.log(`Type username ${password} in password field`);
         this.getPasswordField().type(password);
-    }
-
-    typeInvalidCredentialInPasswordField(text) {
-        cy.log(`Type gibberish in password field`);
-        this.getPasswordField().type(text);
     }
 
     submitLoginForm(userName, password) {

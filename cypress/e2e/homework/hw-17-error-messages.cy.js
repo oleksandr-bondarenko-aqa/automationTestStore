@@ -12,9 +12,9 @@ it('Validate error message on empty credentials', () => {
 it('Validate error message on incorrect login and correct password', () => {
     authorizationPage.visit();
 
-    authorizationPage.typeInvalidCredentialInLoginField('qwqwe');
+    authorizationPage.typeCredentialInLoginField('qwqwe');
 
-    authorizationPage.typeValidCredentialInPasswordField(user.password);
+    authorizationPage.typeCredentialInPasswordField(user.password);
 
     authorizationPage.getLoginButton();
 
@@ -24,9 +24,9 @@ it('Validate error message on incorrect login and correct password', () => {
 it('Validate error message on correct login and incorrect password', () => {
     authorizationPage.visit();
 
-    authorizationPage.typeValidCredentialInLoginField(user.userName);
+    authorizationPage.typeCredentialInLoginField(user.userName);
 
-    authorizationPage.typeInvalidCredentialInPasswordField('qwerty');
+    authorizationPage.typeCredentialInPasswordField('qwerty');
 
     authorizationPage.getLoginButton();
 
