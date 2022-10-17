@@ -12,11 +12,7 @@ it('Validate error message on empty credentials', () => {
 it('Validate error message on incorrect login and correct password', () => {
     authorizationPage.visit();
 
-    authorizationPage.typeCredentialInLoginField('qwqwe');
-
-    authorizationPage.typeCredentialInPasswordField(user.password);
-
-    authorizationPage.getLoginButton();
+    authorizationPage.submitLoginForm('qwqwq', user.password);
 
     authorizationPage.validateIncorrectCredentialErrorMessage();
 });
@@ -24,11 +20,7 @@ it('Validate error message on incorrect login and correct password', () => {
 it('Validate error message on correct login and incorrect password', () => {
     authorizationPage.visit();
 
-    authorizationPage.typeCredentialInLoginField(user.userName);
-
-    authorizationPage.typeCredentialInPasswordField('qwerty');
-
-    authorizationPage.getLoginButton();
+    authorizationPage.submitLoginForm(user.userName, 'qwerert');
 
     authorizationPage.validateIncorrectCredentialErrorMessage();
 });
