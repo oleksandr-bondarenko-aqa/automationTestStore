@@ -1,0 +1,337 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 10,
+    "passes": 10,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-11-08T19:19:55.150Z",
+    "end": "2022-11-08T19:22:20.312Z",
+    "duration": 123746,
+    "testsRegistered": 10,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "87d5eaf7-37b8-424b-a83f-222f326ac2de",
+      "title": "",
+      "fullFile": "cypress\\e2e\\order.cy.js",
+      "file": "cypress\\e2e\\order.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Place Order",
+          "fullTitle": "Place Order",
+          "timedOut": null,
+          "duration": 19415,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "_AuthorizationPage.default.visit();\n_AuthorizationPage.default.submitLoginForm(_user.default.userName, _user.default.password);\n_ProductPage.default.visit();\n_ProductPage.default.getProductQuantity().clear().type('4');\n_ProductPage.default.getAddToCartButton().click();\n_ProductPage.default.getCheckoutButton().click();\n_ProductPage.default.getConfirmOrderButton().click();\n_ProductPage.default.validatePurchase();",
+          "err": {},
+          "uuid": "0ea1db77-a4a1-4cd0-9697-c0613f329a51",
+          "parentUUID": "87d5eaf7-37b8-424b-a83f-222f326ac2de",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Place Order from search",
+          "fullTitle": "Place Order from search",
+          "timedOut": null,
+          "duration": 23207,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "_AuthorizationPage.default.visit();\n_AuthorizationPage.default.submitLoginForm(_user.default.userName, _user.default.password);\n_ProductPage.default.visitHomePage();\n(0, _helper.searchExistingProduct)('Benefit Bella Bamba');\n_ProductPage.default.getProductQuantity().clear().type('4');\n_ProductPage.default.getAddToCartButton().click();\n_ProductPage.default.getCheckoutButton().click();\n_ProductPage.default.getConfirmOrderButton().click();\n_ProductPage.default.validatePurchase();",
+          "err": {},
+          "uuid": "ac0084e8-b610-4ed4-a2dc-3213d966d87a",
+          "parentUUID": "87d5eaf7-37b8-424b-a83f-222f326ac2de",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "0ea1db77-a4a1-4cd0-9697-c0613f329a51",
+        "ac0084e8-b610-4ed4-a2dc-3213d966d87a"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 42622,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "adb6ed39-5ddd-4202-93fa-da269551f68a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\registration.cy.js",
+      "file": "cypress\\e2e\\registration.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "registration with faker.js",
+          "fullTitle": "registration with faker.js",
+          "timedOut": null,
+          "duration": 10963,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "_RegistrationPage.default.visit();\ncy.log(\"**Fill the registration form**\");\n_RegistrationPage.default.getFirstName().type(user.firstName);\n_RegistrationPage.default.getLastName().type(user.lastName);\n_RegistrationPage.default.getEmail().type(user.email);\n_RegistrationPage.default.getAddress1().type(user.address);\n_RegistrationPage.default.getCity().type(user.city);\n_RegistrationPage.default.getRegionState().select(1);\n_RegistrationPage.default.getZipCode().type(user.postcode);\n_RegistrationPage.default.getCountry().select('United Kingdom');\n_RegistrationPage.default.getLoginName().type(user.userName);\n_RegistrationPage.default.getPassword().type(user.password);\n_RegistrationPage.default.getConfirmPassword().type(user.password);\n_RegistrationPage.default.getNewsletterRadioYes().check();\n_RegistrationPage.default.getTermsAgreeCheckbox().check();\n_RegistrationPage.default.getContinueButton().click();\n_RegistrationPage.default.verifyThankYouMessage();",
+          "err": {},
+          "uuid": "68e9c668-2e3b-4272-a2af-8ba09ec7b72e",
+          "parentUUID": "adb6ed39-5ddd-4202-93fa-da269551f68a",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "68e9c668-2e3b-4272-a2af-8ba09ec7b72e"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 10963,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "219f70f2-8b28-4264-9a13-7ece01af6259",
+      "title": "",
+      "fullFile": "cypress\\e2e\\homework\\hw-16-function-search.cy.js",
+      "file": "cypress\\e2e\\homework\\hw-16-function-search.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Place order with product name",
+          "fullTitle": "Place order with product name",
+          "timedOut": null,
+          "duration": 29137,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "_AuthorizationPage.default.visit();\n_AuthorizationPage.default.submitLoginForm(_user.default.userName, _user.default.password);\ncy.visit('/');\ncy.get('#filter_keyword').type('i').closest('form').submit();\n(0, _helper.getProductByName)('Total Moisture Facial Cream');\ncy.get('#product_quantity').clear().type('3');\ncy.get('.productpagecart').click();\ncy.get('#cart_checkout1').click();\ncy.get('#checkout_btn').click();\ncy.get('h1.heading1').should('contain', ' Your Order Has Been Processed!');\ncy.get('.contentpanel').should('contain', 'Your order').and('contain', 'Thank you for shopping with us!');",
+          "err": {},
+          "uuid": "b31224cc-7916-4cde-96a6-c5843d780fcc",
+          "parentUUID": "219f70f2-8b28-4264-9a13-7ece01af6259",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Place order with product name with for",
+          "fullTitle": "Place order with product name with for",
+          "timedOut": null,
+          "duration": 19230,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "_AuthorizationPage.default.visit();\n_AuthorizationPage.default.submitLoginForm(_user.default.userName, _user.default.password);\ncy.visit('/');\ncy.get('#filter_keyword').type('i').closest('form').submit();\n(0, _helper.getProductByNameWithFor)('Total Moisture Facial Cream');\ncy.get('#product_quantity').clear().type('3');\ncy.get('.productpagecart').click();\ncy.get('#cart_checkout1').click();\ncy.get('#checkout_btn').click();\ncy.get('h1.heading1').should('contain', ' Your Order Has Been Processed!');\ncy.get('.contentpanel').should('contain', 'Your order').and('contain', 'Thank you for shopping with us!');",
+          "err": {},
+          "uuid": "3f12188e-66ac-4a7c-9220-3152eba9b18c",
+          "parentUUID": "219f70f2-8b28-4264-9a13-7ece01af6259",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "b31224cc-7916-4cde-96a6-c5843d780fcc",
+        "3f12188e-66ac-4a7c-9220-3152eba9b18c"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 48367,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "26b624d8-bbe5-40e4-a3af-d148d4f72a26",
+      "title": "",
+      "fullFile": "cypress\\e2e\\homework\\hw-17-error-messages.cy.js",
+      "file": "cypress\\e2e\\homework\\hw-17-error-messages.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Validate error message on empty credentials",
+          "fullTitle": "Validate error message on empty credentials",
+          "timedOut": null,
+          "duration": 5583,
+          "state": "passed",
+          "speed": "medium",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "_AuthorizationPage.default.visit();\n_AuthorizationPage.default.getLoginButton();\n_AuthorizationPage.default.validateIncorrectCredentialErrorMessage();",
+          "err": {},
+          "uuid": "93c7c244-17ee-4bf2-b6f7-21938e67109b",
+          "parentUUID": "26b624d8-bbe5-40e4-a3af-d148d4f72a26",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Validate error message on incorrect login and correct password",
+          "fullTitle": "Validate error message on incorrect login and correct password",
+          "timedOut": null,
+          "duration": 3114,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "_AuthorizationPage.default.visit();\n_AuthorizationPage.default.submitLoginForm('qwqwq', _user.default.password);\n_AuthorizationPage.default.validateIncorrectCredentialErrorMessage();",
+          "err": {},
+          "uuid": "8d2b0b6b-6a15-472d-a63c-8d109be722f0",
+          "parentUUID": "26b624d8-bbe5-40e4-a3af-d148d4f72a26",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Validate error message on correct login and incorrect password",
+          "fullTitle": "Validate error message on correct login and incorrect password",
+          "timedOut": null,
+          "duration": 2953,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "_AuthorizationPage.default.visit();\n_AuthorizationPage.default.submitLoginForm(_user.default.userName, 'qwerert');\n_AuthorizationPage.default.validateIncorrectCredentialErrorMessage();",
+          "err": {},
+          "uuid": "b4bbc13c-e26e-430d-8ff5-ab4dd89d36f0",
+          "parentUUID": "26b624d8-bbe5-40e4-a3af-d148d4f72a26",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "93c7c244-17ee-4bf2-b6f7-21938e67109b",
+        "8d2b0b6b-6a15-472d-a63c-8d109be722f0",
+        "b4bbc13c-e26e-430d-8ff5-ab4dd89d36f0"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 11650,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "a50d2b99-7aa6-4075-974e-65045ab53979",
+      "title": "",
+      "fullFile": "cypress\\e2e\\authorization.cy.js",
+      "file": "cypress\\e2e\\authorization.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Authorization",
+          "fullTitle": "Authorization",
+          "timedOut": null,
+          "duration": 9226,
+          "state": "passed",
+          "speed": "medium",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "_AuthorizationPage.default.visit();\n_AuthorizationPage.default.submitLoginForm(_user.default.userName, _user.default.password);\n_AccountPage.default.getUserNameFromHeading();\n_AuthorizationPage.default.validateCookie();",
+          "err": {},
+          "uuid": "bf9afda0-a4dd-498e-9417-5d3eee4bbcd8",
+          "parentUUID": "a50d2b99-7aa6-4075-974e-65045ab53979",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Test Inheritance",
+          "fullTitle": "Test Inheritance",
+          "timedOut": null,
+          "duration": 918,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "_AuthorizationPage.default.visit();\n_AuthorizationPage.default.performSearch('i');",
+          "err": {},
+          "uuid": "78816a78-e35b-475d-9e68-bcfb3ec334ce",
+          "parentUUID": "a50d2b99-7aa6-4075-974e-65045ab53979",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "bf9afda0-a4dd-498e-9417-5d3eee4bbcd8",
+        "78816a78-e35b-475d-9e68-bcfb3ec334ce"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 10144,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

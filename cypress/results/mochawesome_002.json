@@ -1,0 +1,86 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-11-08T19:20:59.974Z",
+    "end": "2022-11-08T19:21:10.994Z",
+    "duration": 11020,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "adb6ed39-5ddd-4202-93fa-da269551f68a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\registration.cy.js",
+      "file": "cypress\\e2e\\registration.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "registration with faker.js",
+          "fullTitle": "registration with faker.js",
+          "timedOut": null,
+          "duration": 10963,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "_RegistrationPage.default.visit();\ncy.log(\"**Fill the registration form**\");\n_RegistrationPage.default.getFirstName().type(user.firstName);\n_RegistrationPage.default.getLastName().type(user.lastName);\n_RegistrationPage.default.getEmail().type(user.email);\n_RegistrationPage.default.getAddress1().type(user.address);\n_RegistrationPage.default.getCity().type(user.city);\n_RegistrationPage.default.getRegionState().select(1);\n_RegistrationPage.default.getZipCode().type(user.postcode);\n_RegistrationPage.default.getCountry().select('United Kingdom');\n_RegistrationPage.default.getLoginName().type(user.userName);\n_RegistrationPage.default.getPassword().type(user.password);\n_RegistrationPage.default.getConfirmPassword().type(user.password);\n_RegistrationPage.default.getNewsletterRadioYes().check();\n_RegistrationPage.default.getTermsAgreeCheckbox().check();\n_RegistrationPage.default.getContinueButton().click();\n_RegistrationPage.default.verifyThankYouMessage();",
+          "err": {},
+          "uuid": "68e9c668-2e3b-4272-a2af-8ba09ec7b72e",
+          "parentUUID": "adb6ed39-5ddd-4202-93fa-da269551f68a",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "68e9c668-2e3b-4272-a2af-8ba09ec7b72e"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 10963,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-11-08T19:19:55.150Z",
+    "end": "2022-11-08T19:20:05.345Z",
+    "duration": 10195,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a50d2b99-7aa6-4075-974e-65045ab53979",
+      "title": "",
+      "fullFile": "cypress\\e2e\\authorization.cy.js",
+      "file": "cypress\\e2e\\authorization.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Authorization",
+          "fullTitle": "Authorization",
+          "timedOut": null,
+          "duration": 9226,
+          "state": "passed",
+          "speed": "medium",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "_AuthorizationPage.default.visit();\n_AuthorizationPage.default.submitLoginForm(_user.default.userName, _user.default.password);\n_AccountPage.default.getUserNameFromHeading();\n_AuthorizationPage.default.validateCookie();",
+          "err": {},
+          "uuid": "bf9afda0-a4dd-498e-9417-5d3eee4bbcd8",
+          "parentUUID": "a50d2b99-7aa6-4075-974e-65045ab53979",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Test Inheritance",
+          "fullTitle": "Test Inheritance",
+          "timedOut": null,
+          "duration": 918,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "_AuthorizationPage.default.visit();\n_AuthorizationPage.default.performSearch('i');",
+          "err": {},
+          "uuid": "78816a78-e35b-475d-9e68-bcfb3ec334ce",
+          "parentUUID": "a50d2b99-7aa6-4075-974e-65045ab53979",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "bf9afda0-a4dd-498e-9417-5d3eee4bbcd8",
+        "78816a78-e35b-475d-9e68-bcfb3ec334ce"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 10144,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
